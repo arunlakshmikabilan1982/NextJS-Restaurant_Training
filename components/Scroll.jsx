@@ -1,0 +1,84 @@
+"use client";
+import { useState } from "react";
+import { Carousel } from "./Carousel";
+import { Heading } from "./Heading";
+
+export function Scroll() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const items = [
+    {
+      title: "Birthday Parties",
+      photoName:
+        "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/event-birthday.jpg",
+      price: "23",
+    },
+    {
+      title: "Coustom Parties",
+      photoName:
+        "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/event-custom.jpg",
+      price: "11",
+    },
+    {
+      title: "private Parties",
+      photoName:
+        "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/event-private.jpg",
+      price: "19",
+    },
+  ];
+
+  function app(newIndex) {
+    if (newIndex < 0) {
+      newIndex = 0;
+    } else if (newIndex >= items.length) {
+      newIndex = items.length - 1;
+    }
+    console.log(newIndex);
+    setActiveIndex(newIndex);
+  }
+  return (
+    <div className="scroll-bg-img" id="Events">
+      <div className="eventHeader">
+        <Heading
+          title="EVENTS"
+          description="Organize Your Events in our Restaurant"
+        />
+      </div>
+
+      <div className="carousel">
+        <div
+          className="inner"
+          style={{ transform: `translate(-${activeIndex * 100}%)` }}
+        >
+          {items.map((item) => {
+            return <Carousel item={item} width={"100%"} key={item} />;
+          })}
+        </div>
+        <div className="carousel-buttons">
+          <div className="indicators">
+            {items.map((item, index) => {
+              return (
+                <button
+                  key={item.index}
+                  className="indicator-buttons"
+                  onClick={() => {
+                    app(index);
+                  }}
+                >
+                  <span
+                    className={`material-symbols-outlined ${
+                      index === activeIndex
+                        ? "indicator-symbol-active"
+                        : "indicator-symbol"
+                    }`}
+                  >
+                    circle
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
