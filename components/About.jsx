@@ -12,22 +12,34 @@ export function About() {
               <p>{about.content1} </p>
               <ul>
                 <li>
-                  <span className="material-symbols-outlined">
-                    check_circle
+                  <span className="inline-flex">
+                    <img
+                      className=" flex w-8 h-8  "
+                      src="images/check_circle.png"
+                      alt="checkCircle"
+                    />
+                    <span className="pl-3">{about.list1}</span>
                   </span>
-                  <i></i> {about.list1}
                 </li>
                 <li>
-                  <span className="material-symbols-outlined">
-                    check_circle
-                  </span>
-                  <i></i> {about.list2}
+                  <span className="inline-flex">
+                    <img
+                      className=" flex w-8 h-8  "
+                      src="images/check_circle.png"
+                      alt="checkCircle"
+                    />
+                    <span className="pl-3">{about.list2}</span>
+                  </span>{" "}
                 </li>
                 <li>
-                  <span className="material-symbols-outlined">
-                    check_circle
+                  <span className="inline-flex">
+                    <img
+                      className=" flex w-8 h-8  "
+                      src="images/check_circle.png"
+                      alt="checkCircle"
+                    />
+                    <span className="pl-3">{about.list3}</span>
                   </span>
-                  <i></i> {about.list2}
                 </li>
               </ul>
               <p>{about.content2} </p>

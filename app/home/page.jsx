@@ -1,5 +1,6 @@
 import { About } from "@/components/About";
 import { Booking } from "@/components/Booking";
+import BookingSample from "@/components/BookingSample";
 import { Carousel } from "@/components/Carousel";
 import { ContactUs } from "@/components/ContactUS";
 import Gallery from "@/components/Gallery";
@@ -27,16 +28,15 @@ export default function page() {
   return (
     <div>
       <NavBar title="Resturant" items={NavBarItems} />
-      {/* <Hero /> */}
-      {/* //   <About />  */}
-      {/* <Gallery images={images} /> */}
-      {/* <Specials /> */}
-      {/* <Booking /> */}
-      {/*// <ContactUs />
+      <Hero />
+      <About />
+      <Gallery images={images} />
+      <Specials />
+      <Booking />
+      <ContactUs />
       <Menu />
       <Testimonial />
       <Scroll />
-      <Carousel /> */}
     </div>
   );
 }
