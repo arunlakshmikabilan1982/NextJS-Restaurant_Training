@@ -5,7 +5,7 @@ import { Underline } from "./Underline";
 
 export default function Gallery(props) {
   return (
-    <div className="galleryFull">
+    <div className="galleryFull" id="galleryFull">
       <div className="GalleryHeading" id="Gallery">
         <Heading title="Gallery" description="some Photos from our resturant" />
       </div>

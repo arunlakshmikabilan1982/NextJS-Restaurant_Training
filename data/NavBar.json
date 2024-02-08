@@ -1,39 +1,39 @@
 [
   {
     "name": "Home",
-    "href": "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select"
+    "href": "#Home"
   },
   {
     "name": "Gallery",
-    "href": "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select"
+    "href": "#galleryFull"
   },
   {
     "name": "Home",
-    "href": "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select"
+    "href": "#Home"
   },
   {
     "name": "Chefs",
-    "href": "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select"
+    "href": "#ChefsMain"
   },
   {
     "name": "Orders",
-    "href": "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select"
+    "href": "#Booking"
   },
 
   {
     "name": "Events",
-    "href": "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select"
+    "href": "#Events"
   },
   {
     "name": "Specials",
-    "href": "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select"
+    "href": "#Specials"
   },
   {
     "name": "Menu",
-    "href": "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select"
+    "href": "#Menu"
   },
   {
     "name": "about",
-    "href": "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select"
+    "href": "#About"
   }
 ]
