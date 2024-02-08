@@ -8,20 +8,17 @@ export function Scroll() {
   const items = [
     {
       title: "Birthday Parties",
-      photoName:
-        "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/event-birthday.jpg",
+      photoName: "images/scroll/event1.png",
       price: "23",
     },
     {
       title: "Coustom Parties",
-      photoName:
-        "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/event-custom.jpg",
+      photoName: "images/scroll/event2.png",
       price: "11",
     },
     {
       title: "private Parties",
-      photoName:
-        "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/event-private.jpg",
+      photoName: "images/scroll/event3.png",
       price: "19",
     },
   ];
@@ -65,13 +62,19 @@ export function Scroll() {
                   }}
                 >
                   <span
-                    className={`material-symbols-outlined ${
+                    className={`${
                       index === activeIndex
                         ? "indicator-symbol-active"
                         : "indicator-symbol"
                     }`}
                   >
-                    circle
+                    <span className="inline-flex mt-4">
+                      <img
+                        className=" flex w-6 h-6  "
+                        src="images/circle_Icon.png"
+                        alt="checkCircle"
+                      />
+                    </span>
                   </span>
                 </button>
               );

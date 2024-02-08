@@ -32,11 +32,11 @@ export default function page() {
       <About />
       <Gallery images={images} />
       <Specials />
-      <Booking />
-      <ContactUs />
       <Menu />
       <Testimonial />
       <Scroll />
+      <Booking />
+      <ContactUs />
     </div>
   );
 }

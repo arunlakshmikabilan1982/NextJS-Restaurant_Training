@@ -2,8 +2,8 @@ import React from "react";
 
 export function Carousel(props) {
   return (
-    <div className="carousel-item">
-      <img className="carousel-img" src="./public/images/event1.png" alt="" />
+    <div className="Carousel-item">
+      <img className="carousel-img" src={props.item.photoName} alt="" />
       <div className="carousel-item-text">
         <p> {props.item.title}</p>
         <br />
