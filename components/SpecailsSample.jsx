@@ -1,12 +1,12 @@
 "use client";
+import React from "react";
 import SpecailItems from "./SpecailItems";
 import { useState } from "react";
-import SpecialComponent from "./SpecialComponent";
 import data1 from "@/data/Specials";
 
 let data = data1;
 
-function SpecialsMain() {
+export default function SpecailsSample() {
   const [type, settype] = useState(data[0]);
 
   function handleEvent(e) {
@@ -21,15 +21,9 @@ function SpecialsMain() {
     console.log(type);
   }
 
-  const TitleStyle = {
-    color: "white",
-    display: "flex",
-    flexDirection: "column",
-  };
-
   return (
-    <div className="MainSpecials">
-      <div style={TitleStyle} className="SpecaialsDishes">
+    <div className="SpecailsMain">
+      <div className="ItemTitles">
         {data.map((item) => (
           <SpecailItems
             key={item.id}
@@ -40,11 +34,22 @@ function SpecialsMain() {
           />
         ))}
       </div>
-      <div>
-        <SpecialComponent type={type} />
+      <div className="ItemHeader">
+        <h1>{type.title}</h1>
+      </div>
+      <div className="ItemDesc">
+        <p>{type.ing}</p>
+      </div>
+      <div className="ItemMatter">
+        <p>{type.desc}</p>
+      </div>
+      <div className="ItemImage">
+        <img
+          src={type.img}
+          alt="imageofCooking"
+          className="SpecailsImage"
+        ></img>
       </div>
     </div>
   );
 }
-
-export default SpecialsMain;
