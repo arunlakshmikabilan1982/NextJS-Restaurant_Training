@@ -6,7 +6,6 @@ import { Hero } from "@/components/Hero";
 import { Menu } from "@/components/Menu";
 import NavBar from "@/components/NavBar";
 import { Scroll } from "@/components/Scroll";
-import SpecailsSample from "@/components/SpecailsSample";
 import Specials from "@/components/Specials";
 import Testimonial from "@/components/Testmonial";
 import NavBarItems from "@/data/NavBar";
@@ -38,6 +37,8 @@ export default async function Page() {
       <Menu />
       <Testimonial />
       <Scroll />
+      <Booking />
+      <ContactUs />
     </div>
   );
 }
