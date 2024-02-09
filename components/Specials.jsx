@@ -1,16 +1,14 @@
 "use client";
 import { Heading } from "./Heading";
-import SpecialsMain from "./SpecialsMain";
+import SpecailsSample from "./SpecailsSample";
 import { Underline } from "./Underline";
 
 function Specials() {
   return (
-    <div className="Specials" id="Specials">
+    <div id="Specials">
       <Heading title="SPECAILS" description="Check Out Tasty Menu" />
-      <SpecialsMain />
-      <div className="center">
-        <Underline />
-      </div>
+      <SpecailsSample />
+      <div className="center">{/* <Underline /> */}</div>
     </div>
   );
 }
