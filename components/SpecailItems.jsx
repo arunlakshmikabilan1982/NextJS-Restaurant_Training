@@ -5,7 +5,7 @@ function SpecailItems(props) {
       className={`p-2 ${props.open ? "ItemOpen" : "Item"}`}
       onClick={() => props.handleOpen(props.id)}
     >
-      {props.title}
+      <p>{props.title}</p>
     </div>
   );
 }
