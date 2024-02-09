@@ -61,11 +61,19 @@ export default function RegisterForm() {
   };
 
   return (
-    <div className="grid place-items-center h-screen">
-      <div className="shadow-lg p-5 rounded-lg border-t-4 border-green-400">
+    <div className="grid place-items-center h-screen ">
+      <div className="closeLogin">
+        <a href="/" className="confirmClose">
+          ❌
+        </a>
+      </div>
+      <div className="bg-white text-black shadow-lg p-5 rounded-lg border-t-4 mb-28 border-green-400">
         <h1 className="text-xl font-bold my-4">Register</h1>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <form
+          onSubmit={handleSubmit}
+          className=" bg-black-700 flex flex-col gap-3"
+        >
           <input
             onChange={(e) => setName(e.target.value)}
             type="text"
@@ -91,9 +99,9 @@ export default function RegisterForm() {
             </div>
           )}
 
-          <Link className="text-sm mt-3 text-right" href={"/"}>
+          {/* <Link className="text-sm mt-3 text-right" href={"/"}>
             Already have an account? <span className="underline">Login</span>
-          </Link>
+          </Link> */}
         </form>
       </div>
     </div>

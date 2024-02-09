@@ -22,7 +22,9 @@ export const authOptions = {
             body: JSON.stringify({ email }),
           });
 
-          const { user } = await resFindOne.json();
+          let { user } = await resFindOne.json();
+
+          // user = { ...user, age: "23" };
 
           console.log(user);
 
