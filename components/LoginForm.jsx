@@ -32,6 +32,10 @@ export default function LoginForm(props) {
       }
 
       router.replace("/home");
+      // const userDeatils = [...user];
+      // const { password, ...userDeatils } = res;
+      // console.log("userDetails", userDeatils);
+      // console.log(user);
     } catch (error) {
       console.log(error);
     }

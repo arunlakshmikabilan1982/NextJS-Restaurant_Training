@@ -25,8 +25,7 @@ export const authOptions = {
           let { user } = await resFindOne.json();
 
           // user = { ...user, age: "23" };
-
-          console.log(user);
+          // console.log(user);
 
           if (!user) {
             return null;
@@ -37,7 +36,6 @@ export const authOptions = {
           if (!passwordsMatch) {
             return null;
           }
-
           return user;
         } catch (error) {
           console.log("Error: ", error);
@@ -45,12 +43,29 @@ export const authOptions = {
       },
     }),
   ],
-  session: {
-    strategy: "jwt",
-  },
+  // session: {
+  //   strategy: "jwt",
+  // },
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
     signIn: "/",
+  },
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user) {
+        return {
+          ...token,
+          user: {
+            ...user,
+          },
+        };
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      session.user = token.user;
+      return session;
+    },
   },
 };
 
