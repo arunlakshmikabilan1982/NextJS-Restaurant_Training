@@ -1,25 +1,10 @@
 "use client";
 import React from "react";
-// import {
-//   Modal,
-//   ModalContent,
-//   ModalHeader,
-//   ModalBody,
-//   ModalFooter,
-//   Button,
-//   useDisclosure,
-// } from "@nextui-org/react";
-
-// import { signOut } from "next-auth/react";
-// import { useSession } from "next-auth/react";
 import DropdownMenu from "./DropdownMenu";
 import { useState } from "react";
 
 export default function App() {
-  // const { data: session } = useSession();
   const [open, setOpen] = useState(false);
-
-  // const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   let value = false;
 
@@ -30,7 +15,6 @@ export default function App() {
         className="icon-button"
         onClick={() => setOpen(!open)}
         onMouseEnter={() => setOpen(!open)}
-        // onMouseLeave={() => setOpen(!open)}
       >
         <img
           src="http://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-High-Quality-Image.png"

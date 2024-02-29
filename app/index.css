@@ -373,7 +373,6 @@ a {
   width: 82vw;
   height: 3px;
   margin-left: 10px;
-  background-color: rgb(235, 216, 112);
   border: none;
   margin-bottom: 0;
 }
@@ -1067,4 +1066,26 @@ form {
   .ItemTitles > div {
     border: none;
   }
+}
+
+.LoginForm {
+  transform: translateX(-1210%);
+}
+.LoginDIV {
+  background-color: rgb(85, 94, 95);
+  text-decoration: none;
+}
+.LoginDIV input {
+  background-color: #3a3734;
+}
+
+.RegistrationForm {
+  transform: translateX(-1210%);
+}
+.RegistrationDiv {
+  background-color: rgb(85, 94, 95);
+  text-decoration: none;
+}
+.RegistrationDiv input {
+  background-color: #3a3734;
 }
