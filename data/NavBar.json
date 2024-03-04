@@ -8,10 +8,6 @@
     "href": "#galleryFull"
   },
   {
-    "name": "Home",
-    "href": "#Home"
-  },
-  {
     "name": "Chefs",
     "href": "#ChefsMain"
   },
@@ -19,7 +15,6 @@
     "name": "Orders",
     "href": "#Booking"
   },
-
   {
     "name": "Events",
     "href": "#Events"

@@ -1,18 +1,18 @@
 import { About } from "@/components/About";
 import { Booking } from "@/components/Booking";
-import BookingSample from "@/components/BookingSample";
-import { Carousel } from "@/components/Carousel";
 import { ContactUs } from "@/components/ContactUS";
 import Gallery from "@/components/Gallery";
 import { Hero } from "@/components/Hero";
 import { Menu } from "@/components/Menu";
 import NavBar from "@/components/NavBar";
 import { Scroll } from "@/components/Scroll";
-import SpecailsSample from "@/components/SpecailsSample";
 import Specials from "@/components/Specials";
 import Testimonial from "@/components/Testmonial";
-import UserInfo from "@/components/UserInfo";
 import NavBarItems from "@/data/NavBar";
+import { redirect } from "next/navigation";
+import { getServerSession } from "next-auth";
+
+import { authOptions } from "../api/auth/[...nextauth]/route";
 
 const images = [
   "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-1.jpg",
@@ -24,8 +24,9 @@ const images = [
   "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-7.jpg",
   "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-8.jpg",
 ];
-
-export default function page() {
+export default async function Page() {
+  // const session = await getServerSession(authOptions);
+  // if (!session) redirect("/home");
   return (
     <div>
       <NavBar title="Resturant" items={NavBarItems} />
@@ -33,11 +34,11 @@ export default function page() {
       <About />
       <Gallery images={images} />
       <Specials />
-      <Booking />
-      <ContactUs />
       <Menu />
       <Testimonial />
-      {/* <Scroll /> */}
+      <Scroll />
+      <Booking />
+      <ContactUs />
     </div>
   );
 }
